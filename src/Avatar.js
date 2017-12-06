@@ -21,22 +21,22 @@ export default class Avatar extends React.Component {
 
   render() {
     const renderAvatarOnTop = this.props.renderAvatarOnTop;
-    const messageToCompare = renderAvatarOnTop ? this.props.previousMessage : this.props.nextMessage;
+    // const messageToCompare = renderAvatarOnTop ? this.props.previousMessage : this.props.nextMessage;
     const computedStyle = renderAvatarOnTop ? "onTop" : "onBottom"
 
     if (this.props.renderAvatar === null) {
       return null
     }
 
-    if (isSameUser(this.props.currentMessage, messageToCompare) && isSameDay(this.props.currentMessage, messageToCompare)) {
-      return (
-        <View style={[styles[this.props.position].container, this.props.containerStyle[this.props.position]]}>
-          <GiftedAvatar
-            avatarStyle={StyleSheet.flatten([styles[this.props.position].image, this.props.imageStyle[this.props.position]])}
-          />
-        </View>
-      );
-    }
+    // if (isSameUser(this.props.currentMessage, messageToCompare) && isSameDay(this.props.currentMessage, messageToCompare)) {
+    //   return (
+    //     <View style={[styles[this.props.position].container, this.props.containerStyle[this.props.position]]}>
+    //       <GiftedAvatar
+    //         avatarStyle={StyleSheet.flatten([styles[this.props.position].image, this.props.imageStyle[this.props.position]])}
+    //       />
+    //     </View>
+    //   );
+    // }
 
     return (
       <View
